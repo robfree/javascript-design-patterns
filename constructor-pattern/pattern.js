@@ -10,12 +10,16 @@ function MyObject (id, name) {
 MyObject.prototype.display = function () {
 	var content = document.getElementById ("content");
 	var p = document.createElement("p");
-	var text = document.createTextNode("Prueba");
+	var text = document.createTextNode("The id for object: " + this.id + " and name: " + this.name);
 	
 	p.appendChild(text);
 	content.appendChild(p);
 };
 
-var objeto1 = new MyObject(1, "El primer Objeto");
+var object1 = new MyObject(1, "The first object");
 
-objeto1.display();
+object1.display();
+
+var object2 = new MyObject(123, "Other object");
+
+object2.display();
